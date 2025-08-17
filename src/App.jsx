@@ -54,7 +54,7 @@ function App() {
     <Router>
       <div className="overflow-x-hidden">
         <div className="bg-black min-h-screen">
-          <Header /> {/* ✅ Always visible */}
+           
 
           <Routes>
             {/* Homepage */}
@@ -62,6 +62,7 @@ function App() {
               path="/"
               element={
                 <>
+                <Header />
                   <Hero />
                   <Discover />
                   <Services />

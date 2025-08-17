@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import { Menu as MenuIcon, X as XIcon } from "lucide-react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink} from "react-scroll"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { to: "home", label: "Home" },
-    { to: "./abouts", label: "About" },
-    { to: "services", label: "Services" },
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
   ];
 
   return (
@@ -33,7 +33,32 @@ function Header() {
                 </Link>
               </li>
             ))}
+            {/* <li>
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={0}
+                spy={true}
+                offset={-70}
+                className="hover:text-blue-200"
+              >
+                About
+              </ScrollLink>
+            </li> */}
+            <li>
+              <ScrollLink
+                to="services"
+                smooth={true}
+                duration={0}
+                spy={true}
+                offset={-70}
+                className="hover:text-blue-200"
+              >
+                Services
+              </ScrollLink>
+            </li>
           </ul>
+
           <div className="text-md">Theresa</div>
           <div className="text-md cursor-pointer">
             Say Hi: theresa5@gmail.com
