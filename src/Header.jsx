@@ -9,8 +9,7 @@ function Header() {
 
   const navLinks = [
     { to: "home", label: "Home" },
-    { to: "./About", label: "About" },
-    // { to: "../pages/About", label: "About" },
+    { to: "./abouts", label: "About" },
     { to: "services", label: "Services" },
   ];
 

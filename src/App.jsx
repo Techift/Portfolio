@@ -47,7 +47,7 @@ import Services from './Services'
 import Works from './Works'
 import Testimonials from './Testimonials'
 import Subsection from './Subsection'
-import About from "./pages/About"; // Adjust the import path as necessary
+import About from "./pages/Abouts"; // Adjust the import path as necessary
 
 function App() {
   return (
