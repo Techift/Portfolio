@@ -3,14 +3,11 @@ import { ArrowUpRightIcon } from "lucide-react";
 function Subsection() {
   return (
     <>
-    <section id="about">
+    <section id="">
       <div className="w-full flex flex-col items-center justify-center py-20">
         <div className="flex flex-col items-center">
           <div className="flex flex-row items-center justify-center flex-wrap gap-2 mb-8">
             <span className="text-5xl sm:text-7xl md:text-8xl text-white">LET'S</span>
-            {/* <span className="mx-2">
-              <img src="/img/pic1.jpg" alt="profile" className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover inline-block align-middle border-2 border-white/30" />
-            </span> */}
             <span className="text-5xl sm:text-7xl md:text-8xl text-white">CREATE</span>
           </div>
           <div className="text-5xl sm:text-7xl md:text-8xl text-white mb-10 text-center">GREAT THINGS.</div>

@@ -1,30 +1,84 @@
-import { useState } from 'react'
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { useState } from 'react'
+// import './App.css'
+// import Header from './Header'
+// import Hero from './Hero'
+// import Discover from './Discover'
+// import Services from './Services'
+// import Works from './Works'
+// import Testimonials from './Testimonials'
+// import Subsection from './Subsection'
+// import About from "./About"; // Adjust the import path as necessary
+
+
+// function App() {
+
+//   return (
+//     <>
+//   <Router>
+//     <Routes>
+//       {/* <Route path="/" element={<Hero />} /> */}
+//   <Route path="/about" element={<About />} />
+//     </Routes>
+//   </Router>
+//     <div className="overflow-x-hidden">
+//    <div className="bg-black min-h-screen">
+//    <Header/>
+//    <Hero/>
+//    <Discover/>
+//    <Services/>
+//    <Works/>
+//    <Testimonials/>
+//    <Subsection/>
+//    </div>
+//    </div>
+//    </>
+//   )
+// }
+
+// export default App
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 import Header from './Header'
 import Hero from './Hero'
 import Discover from './Discover'
 import Services from './Services'
-import Cards from './Cards'
 import Works from './Works'
 import Testimonials from './Testimonials'
 import Subsection from './Subsection'
+import About from "./pages/About"; // Adjust the import path as necessary
 
 function App() {
-
   return (
-    <div className="overflow-x-hidden">
-   <div className="bg-black min-h-screen">
-   <Header/>
-   <Hero/>
-   <Discover/>
-   <Services/>
-   {/* <Cards/> */}
-   <Works/>
-   <Testimonials/>
-   <Subsection/>
-   </div>
-   </div>
-  )
+    <Router>
+      <div className="overflow-x-hidden">
+        <div className="bg-black min-h-screen">
+          <Header /> {/* ✅ Always visible */}
+
+          <Routes>
+            {/* Homepage */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <Discover />
+                  <Services />
+                  <Works />
+                  <Testimonials />
+                  <Subsection />
+                </>
+              }
+            />
+
+            {/* About page */}
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
